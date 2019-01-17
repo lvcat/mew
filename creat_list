@@ -1,0 +1,17 @@
+import os
+name = os.walk("path")#例如/home/boss/Pictures/CASIA-WebFace/folders/pics
+h=[]
+g= []
+for path in name:
+    h.append(path[0])
+    g.append(path[2])
+for i in range(10575):
+    k=h[i]
+    for j in g[i]:
+        lable= k+'/'+j+' '+str(i)+'\n'
+        print(lable)
+        with open("/home/m18_lkg/Documents/casia_train_list","a") as fp:
+            fp.write(lable)
+            fp.close()
+
+
